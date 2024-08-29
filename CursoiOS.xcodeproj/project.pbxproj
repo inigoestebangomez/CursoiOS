@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6A1144D62C7E372200785819 /* CursoiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1144D52C7E372200785819 /* CursoiOSApp.swift */; };
-		6A1144D82C7E372200785819 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1144D72C7E372200785819 /* ContentView.swift */; };
+		6A1144D82C7E372200785819 /* Exercise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1144D72C7E372200785819 /* Exercise1.swift */; };
 		6A1144DA2C7E372300785819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A1144D92C7E372300785819 /* Assets.xcassets */; };
 		6A1144DD2C7E372300785819 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A1144DC2C7E372300785819 /* Preview Assets.xcassets */; };
 		6A1144E72C7E372400785819 /* CursoiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1144E62C7E372400785819 /* CursoiOSTests.swift */; };
 		6A1144F12C7E372400785819 /* CursoiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1144F02C7E372400785819 /* CursoiOSUITests.swift */; };
 		6A1144F32C7E372400785819 /* CursoiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1144F22C7E372400785819 /* CursoiOSUITestsLaunchTests.swift */; };
+		6A1145012C7F1A9700785819 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1145002C7F1A9700785819 /* MainView.swift */; };
+		6A1145062C7F1B5700785819 /* TextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1145052C7F1B5700785819 /* TextExample.swift */; };
+		6A1145082C7F247700785819 /* ImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1145072C7F247700785819 /* ImageExample.swift */; };
+		6A11450A2C7F275800785819 /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1145092C7F275800785819 /* LabelExample.swift */; };
+		6A11450C2C7F29E900785819 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11450B2C7F29E900785819 /* ButtonExample.swift */; };
+		6A11450E2C7F2D9D00785819 /* TextFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11450D2C7F2D9D00785819 /* TextFieldExample.swift */; };
+		6A1145102C7F3B0C00785819 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11450F2C7F3B0C00785819 /* MenuView.swift */; };
+		6A1145132C7F3EC500785819 /* IMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1145122C7F3EC500785819 /* IMCView.swift */; };
+		6A1145152C7F74ED00785819 /* IMCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1145142C7F74ED00785819 /* IMCResult.swift */; };
+		6A1145172C80646E00785819 /* ListExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1145162C80646E00785819 /* ListExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,7 @@
 /* Begin PBXFileReference section */
 		6A1144D22C7E372200785819 /* CursoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1144D52C7E372200785819 /* CursoiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOSApp.swift; sourceTree = "<group>"; };
-		6A1144D72C7E372200785819 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6A1144D72C7E372200785819 /* Exercise1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise1.swift; sourceTree = "<group>"; };
 		6A1144D92C7E372300785819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A1144DC2C7E372300785819 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6A1144E22C7E372400785819 /* CursoiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CursoiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,16 @@
 		6A1144EC2C7E372400785819 /* CursoiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CursoiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1144F02C7E372400785819 /* CursoiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOSUITests.swift; sourceTree = "<group>"; };
 		6A1144F22C7E372400785819 /* CursoiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6A1145002C7F1A9700785819 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6A1145052C7F1B5700785819 /* TextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExample.swift; sourceTree = "<group>"; };
+		6A1145072C7F247700785819 /* ImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExample.swift; sourceTree = "<group>"; };
+		6A1145092C7F275800785819 /* LabelExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExample.swift; sourceTree = "<group>"; };
+		6A11450B2C7F29E900785819 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
+		6A11450D2C7F2D9D00785819 /* TextFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExample.swift; sourceTree = "<group>"; };
+		6A11450F2C7F3B0C00785819 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		6A1145122C7F3EC500785819 /* IMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCView.swift; sourceTree = "<group>"; };
+		6A1145142C7F74ED00785819 /* IMCResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResult.swift; sourceTree = "<group>"; };
+		6A1145162C80646E00785819 /* ListExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +114,12 @@
 		6A1144D42C7E372200785819 /* CursoiOS */ = {
 			isa = PBXGroup;
 			children = (
+				6A1145112C7F3EB600785819 /* IMC */,
+				6A1145022C7F1ACA00785819 /* Components */,
+				6A1144FF2C7F1A2A00785819 /* Exercises */,
 				6A1144D52C7E372200785819 /* CursoiOSApp.swift */,
-				6A1144D72C7E372200785819 /* ContentView.swift */,
+				6A1145002C7F1A9700785819 /* MainView.swift */,
+				6A11450F2C7F3B0C00785819 /* MenuView.swift */,
 				6A1144D92C7E372300785819 /* Assets.xcassets */,
 				6A1144DB2C7E372300785819 /* Preview Content */,
 			);
@@ -125,6 +149,36 @@
 				6A1144F22C7E372400785819 /* CursoiOSUITestsLaunchTests.swift */,
 			);
 			path = CursoiOSUITests;
+			sourceTree = "<group>";
+		};
+		6A1144FF2C7F1A2A00785819 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				6A1144D72C7E372200785819 /* Exercise1.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		6A1145022C7F1ACA00785819 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6A1145052C7F1B5700785819 /* TextExample.swift */,
+				6A1145072C7F247700785819 /* ImageExample.swift */,
+				6A1145092C7F275800785819 /* LabelExample.swift */,
+				6A11450B2C7F29E900785819 /* ButtonExample.swift */,
+				6A11450D2C7F2D9D00785819 /* TextFieldExample.swift */,
+				6A1145162C80646E00785819 /* ListExample.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6A1145112C7F3EB600785819 /* IMC */ = {
+			isa = PBXGroup;
+			children = (
+				6A1145122C7F3EC500785819 /* IMCView.swift */,
+				6A1145142C7F74ED00785819 /* IMCResult.swift */,
+			);
+			path = IMC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A1144D82C7E372200785819 /* ContentView.swift in Sources */,
+				6A1144D82C7E372200785819 /* Exercise1.swift in Sources */,
+				6A11450C2C7F29E900785819 /* ButtonExample.swift in Sources */,
+				6A11450A2C7F275800785819 /* LabelExample.swift in Sources */,
+				6A1145062C7F1B5700785819 /* TextExample.swift in Sources */,
+				6A1145172C80646E00785819 /* ListExample.swift in Sources */,
+				6A1145152C7F74ED00785819 /* IMCResult.swift in Sources */,
+				6A1145102C7F3B0C00785819 /* MenuView.swift in Sources */,
+				6A1145012C7F1A9700785819 /* MainView.swift in Sources */,
+				6A1145082C7F247700785819 /* ImageExample.swift in Sources */,
+				6A11450E2C7F2D9D00785819 /* TextFieldExample.swift in Sources */,
+				6A1145132C7F3EC500785819 /* IMCView.swift in Sources */,
 				6A1144D62C7E372200785819 /* CursoiOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
