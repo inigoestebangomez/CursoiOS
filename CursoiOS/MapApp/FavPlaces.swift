@@ -13,11 +13,14 @@ struct FavPlaces: View {
     @State var position = MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.29087739524189, longitude: 5.355565308361441), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)))
     
     @State var places: [Place] = []
-//    @State var showPopUp:Bool = false
+    //    @State var showPopUp:Bool = false
     @State var showPopUp:CLLocationCoordinate2D? = nil
     @State var name:String = ""
     @State var fav:Bool = false
-
+    @State var showSheet = false
+    
+    let height = stride(from: 0.3, through: 0.6, by: 0.1).map{ PresentationDetent.fraction($0)}
+    
     var body: some View {
         ZStack{
             MapReader{ proxy in
@@ -32,10 +35,23 @@ struct FavPlaces: View {
                         }
                     }
                 }
-                    .onTapGesture { coord in
-                        if let coordinates = proxy.convert(coord, from: .local){
-                            showPopUp = coordinates
-                        }
+                .onTapGesture { coord in
+                    if let coordinates = proxy.convert(coord, from: .local){
+                        showPopUp = coordinates
+                    }
+                }
+                .overlay{
+                    VStack{
+                        Button("Show list"){
+                            showSheet = true
+                        }.padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                            .background(.white)
+                            .cornerRadius(16)
+                            .padding(16)
+                        Spacer()
+                    }
+                    
                 }
             }
             
@@ -52,11 +68,28 @@ struct FavPlaces: View {
                     }
                 }
                 withAnimation{
-                CustomDIalog(closeDialog: {
-                    showPopUp = nil
-                }, onDismissOutside: true, content: view)
+                    CustomDIalog(closeDialog: {
+                        showPopUp = nil
+                    }, onDismissOutside: true, content: view)
                 }
             }
+        }.sheet(isPresented: $showSheet) {
+            ScrollView(.horizontal){
+                LazyHStack{
+                    ForEach(places){ place in
+                        let color = if place.fav{ Color.yellow.opacity(0.5) }else{ Color.black.opacity(0.5)}
+                        VStack{
+                            Text(place.name).font(.title3).bold()
+                        }.frame(width: 150, height: 100).overlay{
+                            RoundedRectangle(cornerRadius: 20).stroke(color, lineWidth: 1)
+                        }.shadow(radius: 5).padding(.horizontal, 8)
+                            .onTapGesture {
+                                animateCamera(coordinates: place.coordinates)
+                                showSheet = false
+                            }
+                    }
+                }
+            }.presentationDetents(Set(height))
         }
     }
     func savePlace(name:String, fav:Bool, coordinates: CLLocationCoordinate2D){
@@ -68,6 +101,13 @@ struct FavPlaces: View {
         name = ""
         fav = false
         showPopUp = nil
+    }
+    func animateCamera(coordinates: CLLocationCoordinate2D){
+        withAnimation{
+            position = MapCameraPosition.region(MKCoordinateRegion(
+                center: coordinates,
+                span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)))
+        }
     }
 }
 
