@@ -90,11 +90,14 @@ struct FavPlaces: View {
                     }
                 }
             }.presentationDetents(Set(height))
+        }.onAppear{
+            loadPlaces()
         }
     }
     func savePlace(name:String, fav:Bool, coordinates: CLLocationCoordinate2D){
         let place = Place(name: name, coordinates: coordinates, fav: fav)
         places.append(place)
+        savePlaces()
     }
     
     func clearForm(){
@@ -111,6 +114,21 @@ struct FavPlaces: View {
     }
 }
 
+extension FavPlaces{
+    func savePlaces(){
+        if let encodeData = try? JSONEncoder().encode(places){
+            UserDefaults.standard.set(encodeData, forKey: "places")
+        }
+    }
+    func loadPlaces(){
+        if let savedPlaces = UserDefaults.standard.data(forKey: "places"),
+           let decodedPlaces = try? JSONDecoder().decode([Place].self, from: savedPlaces){
+            places = decodedPlaces
+        }
+    }
+}
+
 #Preview {
     FavPlaces()
 }
+
